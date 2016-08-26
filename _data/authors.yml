@@ -16,3 +16,22 @@ Cornelius Fiddlebone:
   avatar      : "bio-photo.jpg"
   twitter     : "rhymeswithsackit"
   google_plus : "CorneliusFiddlebone"
+
+
+
+author1:
+  name        : "Author 1"
+  uri         : "http://example.com"
+  email       : "author1@example.com"
+  bio         : "What do you want, jewels? I am a very extravagant man."
+  avatar      : "bio-photo-2.jpg"
+  twitter     : "xxx"
+  google_plus : "xxx"
+
+author2:
+  name        : "Author2"
+  email       : "cornelius@thewhip.com"
+  bio         : "I ordered what?"
+  avatar      : "bio-photo.jpg"
+  twitter     : "xxy"
+  linkedin    : "xxy"

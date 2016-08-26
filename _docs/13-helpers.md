@@ -92,10 +92,10 @@ gallery:
     title: "Image 3 title caption"
 ```
 
-And then drop-in the gallery include in the body where you'd like it to appear. 
+And then drop-in the gallery include in the body where you'd like it to appear.
 
 | Include Parameter | Required    | Description | Default |
-| ----------------- | --------    | ----------- | ------- | 
+| ----------------- | --------    | ----------- | ------- |
 | **id**            | Optional    | To add multiple galleries to a document uniquely name them in the YAML Front Matter and reference in `{% raw %}{% include gallery id="gallery_id" %}{% endraw %}` | `gallery` |
 | **class**         | Optional    | Use to add a `class` attribute to the surrounding `<figure>` element for additional styling needs. | |
 | **caption**       | Optional    | Gallery caption description. Markdown is allowed. | |
@@ -108,8 +108,6 @@ And then drop-in the gallery include in the body where you'd like it to appear.
 
 {% include gallery caption="This is a sample gallery with **Markdown support**." %}
 
-**More Gallery Goodness:** A few more examples and [source code](https://github.com/{{ site.repository }}/blob/gh-pages/_posts/2010-09-09-post-gallery.md) can be seen in [this sample gallery post]({{ base_path }}{% post_url 2010-09-09-post-gallery %}).
-{: .notice--info}
 
 ## Feature Row
 

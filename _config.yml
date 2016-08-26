@@ -7,13 +7,13 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Minimal Mistakes"
+title                    : "Automation"
 title_separator          : "-"
 name                     : &name "Michael Rose"
 description              : &description "A flexible Jekyll theme for your blog or site with a minimalist aesthetic."
-url                      : https://mmistakes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
-baseurl                  : "/minimal-mistakes" # the subpath of your site, e.g. "/blog"
-repository               : "mmistakes/minimal-mistakes"
+url                      : http://127.0.0.1:4000 # https://mmistakes.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl                  : "" # "/minimal-mistakes" # the subpath of your site, e.g. "/blog"
+repository               : # "mmistakes/minimal-mistakes"
 teaser                   : # filename of teaser fallback teaser image placed in /images/, .e.g. "500x300.png"
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -48,7 +48,7 @@ atom_feed:
   path                   : # blank (default) uses feed.xml
 
 # SEO Related
-google_site_verification : "UQj93ERU9zgECodaaXgVpkjrFn9UrDMEzVamacSoQ8Y"
+google_site_verification :
 bing_site_verification   :
 alexa_site_verification  :
 yandex_site_verification :
@@ -74,7 +74,7 @@ social:
 analytics:
   provider               : "google-universal" # false (default), "google", "google-universal", "custom"
   google:
-    tracking_id          : "UA-2011187-3"
+    tracking_id          : ""
 
 
 # Site Author
@@ -169,7 +169,7 @@ collections:
   docs:
     output: true
     permalink: /:collection/:path/
-  recipes:
+  code-tutorial:
     output: true
     permalink: /:collection/:path/
   pets:
@@ -178,11 +178,40 @@ collections:
   portfolio:
     output: true
     permalink: /:collection/:path/
+  principals:
+    output: true
+    permalink: /:collection/:path/
 
 
 # Defaults
 defaults:
   # _posts
+  - scope:
+      path: "_posts/author1"
+      type: posts
+    values:
+      author: author1
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+  - scope:
+      path: "_posts/author2"
+      type: posts
+    values:
+      author: author2
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: true
+      share: true
+      related: true
+
+
+
   - scope:
       path: ""
       type: posts
@@ -215,12 +244,12 @@ defaults:
   # _recipes
   - scope:
       path: ""
-      type: recipes
+      type: code-tutorial
     values:
       layout: single
-      author_profile: true
+      author_profile: false
       share: true
-      comments: true
+      comments: false
   # _pets
   - scope:
       path: ""
@@ -238,6 +267,15 @@ defaults:
       layout: single
       author_profile: false
       share: true
+  # _principals
+  - scope:
+      path: ""
+      type: principals
+    values:
+      layout: single
+      author_profile: false
+      share: true
+      comment: false
 
 
 # Sass/SCSS
@@ -247,9 +285,9 @@ sass:
 
 
 # Outputting
-permalink: /:categories/:title/
-# paginate: 5 # amount of posts to show
-# paginate_path: /page:num/
+permalink: /:title/
+#paginate: 5 # amount of posts to show
+#paginate_path: /page:num/
 timezone: America/New_York # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
